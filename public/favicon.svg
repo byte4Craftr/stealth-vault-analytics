@@ -6,7 +6,9 @@
     </linearGradient>
   </defs>
   <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
-  <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white" opacity="0.9"/>
-  <circle cx="22" cy="10" r="3" fill="white" opacity="0.8"/>
-  <path d="M20 8h4v4h-4V8z" fill="url(#gradient)"/>
+  <!-- Portfolio chart icon -->
+  <path d="M6 20h4v6H6v-6zm6-4h4v10h-4V16zm6-6h4v16h-4V10z" fill="white" opacity="0.9"/>
+  <!-- Stealth indicator -->
+  <circle cx="24" cy="8" r="2" fill="white" opacity="0.8"/>
+  <path d="M23 7h2v2h-2V7z" fill="url(#gradient)"/>
 </svg>

@@ -269,6 +269,35 @@ contract StealthVaultAnalytics is SepoliaConfig {
     }
     
     /**
+     * @dev Clear user's private data (user only)
+     */
+    function clearPrivateData() public {
+        require(portfolios[msg.sender].owner == msg.sender, "Not portfolio owner");
+        
+        // Clear portfolio data
+        delete portfolios[msg.sender];
+        
+        // Clear user positions
+        delete userPositions[msg.sender];
+        
+        emit PortfolioUpdated(msg.sender, 0);
+    }
+    
+    /**
+     * @dev Clear specific position data (position owner only)
+     */
+    function clearPositionData(uint256 positionId) public {
+        require(positions[positionId].owner == msg.sender, "Not position owner");
+        
+        // Mark position as inactive instead of deleting to maintain history
+        positions[positionId].isActive = FHE.asEbool(false);
+        positions[positionId].encryptedAmount = FHE.asEuint32(0);
+        positions[positionId].encryptedShares = FHE.asEuint32(0);
+        
+        emit PositionUpdated(positionId, 0);
+    }
+    
+    /**
      * @dev Emergency pause function (owner only)
      */
     function pause() public onlyOwner {

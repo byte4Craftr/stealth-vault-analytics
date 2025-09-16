@@ -86,6 +86,20 @@ export const STEALTH_VAULT_ABI = [
     "outputs": [{"name": "", "type": "uint256[]"}],
     "stateMutability": "view",
     "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "clearPrivateData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{"name": "positionId", "type": "uint256"}],
+    "name": "clearPositionData",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   }
 ] as const;
 
@@ -228,11 +242,51 @@ export function useStealthVaultContract() {
     }
   };
 
+  // Clear all private data
+  const clearPrivateData = async () => {
+    if (!address) throw new Error("No wallet connected");
+
+    try {
+      const hash = await writeContract({
+        address: CONTRACT_ADDRESS as `0x${string}`,
+        abi: STEALTH_VAULT_ABI,
+        functionName: 'clearPrivateData',
+        args: []
+      });
+
+      return hash;
+    } catch (error) {
+      console.error('Error clearing private data:', error);
+      throw error;
+    }
+  };
+
+  // Clear specific position data
+  const clearPositionData = async (positionId: number) => {
+    if (!address) throw new Error("No wallet connected");
+
+    try {
+      const hash = await writeContract({
+        address: CONTRACT_ADDRESS as `0x${string}`,
+        abi: STEALTH_VAULT_ABI,
+        functionName: 'clearPositionData',
+        args: [BigInt(positionId)]
+      });
+
+      return hash;
+    } catch (error) {
+      console.error('Error clearing position data:', error);
+      throw error;
+    }
+  };
+
   return {
     createPosition,
     updatePosition,
     updatePortfolioMetrics,
-    requestAnalytics
+    requestAnalytics,
+    clearPrivateData,
+    clearPositionData
   };
 }
 

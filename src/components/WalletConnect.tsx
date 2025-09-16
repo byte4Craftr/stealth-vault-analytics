@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Shield, Wallet, CheckCircle, AlertCircle } from "lucide-react";
+import { Wallet, CheckCircle, AlertCircle, Lock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
@@ -22,9 +22,9 @@ const WalletConnect = () => {
     <Card className="p-6 bg-gradient-glass backdrop-blur-xl border-border/50 shadow-glass">
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 rounded-lg bg-accent/20">
-          <Shield className="h-5 w-5 text-accent" />
+          <Lock className="h-5 w-5 text-accent" />
         </div>
-        <h3 className="text-lg font-semibold">Secure Wallet Connection</h3>
+        <h3 className="text-lg font-semibold">Encrypted Wallet Connection</h3>
       </div>
       
       {!isConnected ? (
@@ -125,7 +125,7 @@ const WalletConnect = () => {
           </ConnectButton.Custom>
           
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
-            <Shield className="h-3 w-3" />
+            <Lock className="h-3 w-3" />
             <span>Your keys never leave your device</span>
           </div>
         </div>

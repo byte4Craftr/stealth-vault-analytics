@@ -1,33 +1,36 @@
-# Stealth Vault Analytics
+# 📊 Stealth Vault Analytics
 
-A privacy-preserving DeFi portfolio analytics platform built with FHE (Fully Homomorphic Encryption) technology. This platform enables users to manage their DeFi portfolios with complete privacy while maintaining publicly verifiable performance analytics.
+> **Next-Generation Privacy-Preserving DeFi Portfolio Management**
 
-## 🚀 Features
+Transform your DeFi portfolio management with cutting-edge FHE (Fully Homomorphic Encryption) technology. Experience the future of private financial analytics where your data remains encrypted while enabling public verification of performance metrics.
 
-- **Privacy-First Design**: All sensitive portfolio data is encrypted using FHE technology
-- **Real Wallet Integration**: Connect with Rainbow, MetaMask, and other popular wallets
-- **Encrypted Portfolio Management**: Track positions, P&L, and risk metrics privately
-- **Public Analytics**: Share performance metrics without exposing sensitive data
-- **Stealth Mode**: Complete privacy mode for sensitive operations
-- **Multi-Chain Support**: Built for Ethereum Sepolia testnet with mainnet compatibility
+## ✨ Core Capabilities
 
-## 🛠️ Technology Stack
+- **🔒 Zero-Knowledge Privacy**: Your portfolio data stays encrypted at all times
+- **💼 Multi-Wallet Support**: Seamless integration with Rainbow, MetaMask, and 50+ wallets
+- **📈 Encrypted Analytics**: Track performance, risk, and P&L without data exposure
+- **🌐 Public Verification**: Share metrics publicly while keeping sensitive data private
+- **⚡ Stealth Operations**: Complete privacy mode for sensitive transactions
+- **🔗 Cross-Chain Ready**: Built for Sepolia with mainnet compatibility
 
-- **Frontend**: React + TypeScript + Vite
-- **Styling**: Tailwind CSS + shadcn/ui
-- **Blockchain**: Ethereum + FHE (Zama Network)
-- **Wallet Integration**: RainbowKit + Wagmi + Viem
-- **Smart Contracts**: Solidity with FHE encryption
-- **Build Tool**: Vite
-- **Package Manager**: npm
+## 🏗️ Architecture & Technology
 
-## 📋 Prerequisites
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| **Frontend** | React 18 + TypeScript + Vite | Modern, fast development experience |
+| **UI Framework** | Tailwind CSS + shadcn/ui | Beautiful, accessible components |
+| **Blockchain** | Ethereum + FHE (Zama Network) | Privacy-preserving smart contracts |
+| **Wallet Layer** | RainbowKit + Wagmi + Viem | Universal wallet connectivity |
+| **Encryption** | FHE Solidity Libraries | Zero-knowledge data processing |
+| **Build System** | Vite + npm | Optimized production builds |
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Git
-- MetaMask or compatible wallet
-- Sepolia ETH for testing
+## 🎯 Quick Start Requirements
+
+- **Node.js** v18+ (LTS recommended)
+- **Package Manager** npm/yarn/pnpm
+- **Git** for version control
+- **Web3 Wallet** (MetaMask, Rainbow, etc.)
+- **Test ETH** on Sepolia network
 
 ## 🚀 Getting Started
 
@@ -123,12 +126,14 @@ stealth-vault-analytics/
 └── package.json
 ```
 
-## 🔐 Security Features
+## 🔐 Privacy & Security Architecture
 
-- **FHE Encryption**: All sensitive data is encrypted using Fully Homomorphic Encryption
-- **Zero-Knowledge Privacy**: Portfolio data remains private while enabling public verification
-- **Secure Wallet Integration**: Private keys never leave the user's device
-- **Encrypted Smart Contracts**: On-chain data is encrypted and can only be decrypted by authorized parties
+- **🔒 FHE Encryption**: All sensitive data encrypted using Fully Homomorphic Encryption
+- **🎭 Zero-Knowledge Privacy**: Portfolio data remains private while enabling public verification
+- **🔑 Secure Wallet Integration**: Private keys never leave the user's device
+- **📦 Encrypted Smart Contracts**: On-chain data encrypted and accessible only to authorized parties
+- **🗑️ Data Clearing**: Built-in functions to clear private data when needed
+- **🔐 Access Controls**: Proper permission management for all contract functions
 
 ## 🌐 Deployment
 
