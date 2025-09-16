@@ -15,7 +15,7 @@ const config: HardhatUserConfig = {
   },
   networks: {
     sepolia: {
-      url: process.env.VITE_RPC_URL || "https://sepolia.infura.io/v3/b18fb7e6ca7045ac83c41157ab93f990",
+      url: process.env.VITE_RPC_URL || "https://sepolia.infura.io/v3/YOUR_INFURA_API_KEY",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
       chainId: 11155111,
     },

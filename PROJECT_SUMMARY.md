@@ -60,9 +60,9 @@ Stealth Vault Analytics is a privacy-preserving DeFi portfolio analytics platfor
 ### 5. Environment Configuration
 - ✅ **Set up environment variables**
   - Chain ID: 11155111 (Sepolia)
-  - RPC URL: https://sepolia.infura.io/v3/b18fb7e6ca7045ac83c41157ab93f990
-  - WalletConnect Project ID: 2ec9743d0d0cd7fb94dee1a7e6d33475
-  - Infura API Key: b18fb7e6ca7045ac83c41157ab93f990
+  - RPC URL: https://sepolia.infura.io/v3/YOUR_INFURA_API_KEY
+  - WalletConnect Project ID: YOUR_WALLET_CONNECT_PROJECT_ID
+  - Infura API Key: YOUR_INFURA_API_KEY
 
 ### 6. Git History & Deployment
 - ✅ **Cleaned Git history**
@@ -135,9 +135,9 @@ src/
 ### Environment Variables
 ```env
 VITE_CHAIN_ID=11155111
-VITE_RPC_URL=https://sepolia.infura.io/v3/b18fb7e6ca7045ac83c41157ab93f990
-VITE_WALLET_CONNECT_PROJECT_ID=2ec9743d0d0cd7fb94dee1a7e6d33475
-VITE_INFURA_API_KEY=b18fb7e6ca7045ac83c41157ab93f990
+VITE_RPC_URL=https://sepolia.infura.io/v3/YOUR_INFURA_API_KEY
+VITE_WALLET_CONNECT_PROJECT_ID=YOUR_WALLET_CONNECT_PROJECT_ID
+VITE_INFURA_API_KEY=YOUR_INFURA_API_KEY
 ```
 
 ## 📊 Project Statistics
